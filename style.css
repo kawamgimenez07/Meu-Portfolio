@@ -1,0 +1,93 @@
+/* ROLAGEM SUAVE NATIVA */
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --custom-purple: #2d1c7f;
+  --custom-purple-light: #4c32cb;
+  --custom-purple-bg: rgba(45, 28, 127, 0.25);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-brand {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.text-custom-purple {
+  color: #7b62f5 !important;
+}
+
+.btn-custom-purple {
+  background-color: var(--custom-purple);
+  border-color: var(--custom-purple);
+  color: #ffffff;
+}
+
+.btn-custom-purple:hover {
+  background-color: var(--custom-purple-light);
+  border-color: var(--custom-purple-light);
+  color: #ffffff;
+}
+
+.btn-outline-custom-purple {
+  border-color: var(--custom-purple-light);
+  color: #a492f8;
+}
+
+.btn-outline-custom-purple:hover {
+  background-color: var(--custom-purple);
+  border-color: var(--custom-purple);
+  color: #ffffff;
+}
+
+.badge-custom-purple {
+  background-color: var(--custom-purple-bg);
+  color: #b1a0f8;
+  border: 1px solid var(--custom-purple-light);
+}
+
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: radial-gradient(circle at top right, rgba(45, 28, 127, 0.4), transparent 50%);
+}
+
+.timeline-item {
+  border-left: 3px solid var(--custom-purple-light);
+  padding-left: 1.25rem;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--custom-purple-light);
+}
+
+.project-card {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--custom-purple-light) !important;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 0.7s infinite;
+}
